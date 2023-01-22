@@ -42,6 +42,8 @@ const restaurant = {
   }
 };
 
+// =========================================================================================
+
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole, 21',
@@ -78,7 +80,7 @@ const arr = [7,8,9];
 const newArr = [1,2, ...arr];
 console.log(newArr);
 
-//we want the individual elements of the array, wez will use the spread operator
+//we want the individual elements of the array, we will use the spread operator
 console.log(...newArr);
 
 //We want to add a new Menu in the main menu
@@ -165,14 +167,15 @@ restaurant.orderPizza('mushrooms','onion','olives','spinach');
   console.log(0 && 'Jonas');
   console.log(7 && 'Jonas');
   
-  //The nullish coalescing operattor (opérateur de fusion null) works with the concept of nullish values insta=ead of falsy values ------------ And nullish values are null and undefined
+  //The nullish coalescing operattor (opérateur de fusion null) works with the concept of nullish values instaead of falsy values ------------ And nullish values are null and undefined
   //It does not include zero or the empty string , for the nullish operator, zero and empty string are not falsy values
   // restaurant.numGuests = 0;
   const guests = restaurant.numGuests || 10;
+  console.log(restaurant.numGuests);
   console.log(guests);
 
   const guestCorrect = restaurant.numGuests ?? 10;
-  console.log(guestCorrect);
+  console.log("Nullish concept: "+guestCorrect);
 
   //We set a default value to rest2
 
@@ -334,9 +337,21 @@ console.log(restaurant.openingHours.mon.open);
 //WITH optional chaining
 console.log(restaurant.openingHours.mon?.open)
 
+const days = ['mon', 'tue','wed', 'thu','fri','sat','sun'];
+
+for(const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open || 'closed';
+  console.log(`On ${day}, we open at ${open}`)
+}
+
 
 const greet = greeting => name => console.log(`${greeting} ${name}`);
 const greeterHey = greet('Hey');
 greeterHey('Amadou');
+
+//Optional chainings on method
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
 
