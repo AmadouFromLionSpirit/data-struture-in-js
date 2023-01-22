@@ -354,4 +354,8 @@ greeterHey('Amadou');
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
+//Optional chainings on arrays
+const users = [{name: 'Jonas', email: 'hello@jonas.io'}];
+
+console.log(users[0]?.name ?? 'user array empty');
 
