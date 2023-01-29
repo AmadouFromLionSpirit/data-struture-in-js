@@ -389,3 +389,6 @@ console.log(airline.slice(4));
 /* it is impossible to mutate strings, they are primitives , so if we want to use this 
 string now we would have to store it first into some variable or some data structure
 so the slice method and all others methds we will talk about always return a new string */
+
+//The slice method has an end parameter
+console.log(airline.slice(4, 7));
