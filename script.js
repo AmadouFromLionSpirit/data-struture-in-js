@@ -404,3 +404,8 @@ console.log(airline.slice(0, airline.indexOf(' '))); //Remember, this will give 
 //Extracting the last word
 console.log(airline.slice(airline.lastIndexOf(' ') + 1)) //+1 to remove the space that was included in the answer;
 //Result: Portugal
+
+//We can start counting from the end by definig a negative argument, actually
+//start extracting from the end
+console.log(airline.slice(-2));
+//Result: al //Here are the last two letters from Portugal 
