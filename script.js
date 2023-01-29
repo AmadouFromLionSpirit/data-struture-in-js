@@ -376,3 +376,7 @@ console.log(airline.indexOf('r'));
 //Get the position of the last occurence of a letter
 console.log(airline.lastIndexOf('r'));
 //result:10
+
+//Get the occurence of an entire word
+console.log(airline.indexOf('Portugal'));
+//result: it is at position 8
