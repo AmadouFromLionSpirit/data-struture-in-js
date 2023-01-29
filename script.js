@@ -379,4 +379,13 @@ console.log(airline.lastIndexOf('r'));
 
 //Get the occurence of an entire word
 console.log(airline.indexOf('Portugal'));
-//result: it is at position 8
+//result: it is at position 8, this one is case sensitive
+
+//The slice method to extract, the first parameter is where to begin
+console.log(airline.slice(4));
+//rsult: Air Portugal
+//A substring is a part of the original string
+//Keep in mind that slice does not change the underlying string, that because
+/* it is impossible to mutate strings, they are primitives , so if we want to use this 
+string now we would have to store it first into some variable or some data structure
+so the slice method and all others methds we will talk about always return a new string */
