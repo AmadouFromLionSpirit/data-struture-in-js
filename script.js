@@ -359,3 +359,15 @@ const users = [{name: 'Jonas', email: 'hello@jonas.io'}];
 
 console.log(users[0]?.name ?? 'user array empty');
 
+//Working with Strings 
+console.log("===============================Working with Strings==================")
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+//We can get the character of a string at a certain position 
+console.log(plane[0]);
+console.log('B737'[0]);
+
+//Strings have methods
+//We can get the position of a certain letter in a String 
+console.log(airline.indexOf('r'));
