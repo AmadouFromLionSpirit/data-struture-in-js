@@ -371,3 +371,8 @@ console.log('B737'[0]);
 //Strings have methods
 //We can get the position of a certain letter in a String 
 console.log(airline.indexOf('r'));
+//result: 6 ! But this method at the top will give us only the first occurence
+
+//Get the position of the last occurence of a letter
+console.log(airline.lastIndexOf('r'));
+//result:10
