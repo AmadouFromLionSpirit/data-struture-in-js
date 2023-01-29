@@ -392,3 +392,15 @@ so the slice method and all others methds we will talk about always return a new
 
 //The slice method has an end parameter
 console.log(airline.slice(4, 7));
+//result: Air, it stops extracting before we reach index number 7, it stops extracting
+//before we reach index number 7
+//The lenght of the extracted string always gonna be lenght - begining: 7-4 = 3
+
+//Extracting a word without knowing any indexes
+//That's where indexOf and lastIndexOf become very important
+console.log(airline.slice(0, airline.indexOf(' '))); //Remember, this will give us the first occurence of the space
+//result: TAP
+
+//Extracting the last word
+console.log(airline.slice(airline.lastIndexOf(' ') + 1)) //+1 to remove the space that was included in the answer;
+//Result: Portugal
