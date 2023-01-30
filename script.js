@@ -414,3 +414,26 @@ console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
 //Result: AP Air Portuga
 
+//Let's write a function that receives an airplane seat and log in the console
+//whether it is a middle seat or not
+const checkMiddleSeat = function (seat) {
+  // B and E are the middle seat 
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat');
+  }
+  else console.log('You got lucky');
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+//Result:
+/* You got the middle seat
+You got lucky
+You got the middle seat */
+
+//String are just primitives, so why do they have methods ?Js automatically converts a string primitive to a String object when we call
+//it with a method // This process is called boxing
+console.log(new String('Jonas'));
