@@ -444,3 +444,10 @@ console.log(airline.toLowerCase());
 
 console.log(airline.toUpperCase());
 //result: TAP AIR PORTUGAl
+
+//Fix capitalization in names 
+const passenger = 'jOnAS'; //to fix this, the first step is to put everything in lower case here 
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
