@@ -449,5 +449,15 @@ console.log(airline.toUpperCase());
 const passenger = 'jOnAS'; //to fix this, the first step is to put everything in lower case here 
 const passengerLower = passenger.toLowerCase();
 const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+console.log(passengerCorrect); //Result: Jonas
+
+//Example; check user input email
+const email = 'hello@jonas.io';
+const loginEmail = '   Hello@Jonas.Io \n'
+  //Comparing emails 
+    //When we check user input like this, the first step is to convert it to lowercase
+const lowerEmail = loginEmail.toLowerCase();
+//Then we want to get rid to all the white space and also the enter at the top 
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail); //result:hello@jonas.io
 
