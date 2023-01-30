@@ -437,3 +437,10 @@ You got the middle seat */
 //String are just primitives, so why do they have methods ?Js automatically converts a string primitive to a String object when we call
 //it with a method // This process is called boxing
 console.log(new String('Jonas'));
+
+//Change case of a string 
+console.log(airline.toLowerCase());
+//result: tap air portugal
+
+console.log(airline.toUpperCase());
+//result: TAP AIR PORTUGAl
