@@ -408,4 +408,9 @@ console.log(airline.slice(airline.lastIndexOf(' ') + 1)) //+1 to remove the spac
 //We can start counting from the end by definig a negative argument, actually
 //start extracting from the end
 console.log(airline.slice(-2));
-//Result: al //Here are the last two letters from Portugal 
+//Result: al //Here are the last two letters from Portugal
+
+//We can also specify the negative end parameter 
+console.log(airline.slice(1, -1));
+//Result: AP Air Portuga
+
