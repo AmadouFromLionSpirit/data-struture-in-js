@@ -485,5 +485,12 @@ console.log(priceUS);
 //Replace entire word
   //replace creates a brand new string, it doesn't mutate the other one
 const annoucement = 'All passengers come to boarding door 23. Boarding door 23!'
-console.log(annoucement.replaceAll('door', 'gate'));// result: All passengers come to boarding gate 23. Boarding door 23!
-//replace here at the top did work only on the first occurence
+console.log(annoucement.replace('door', 'gate'));// result: All passengers come to boarding gate 23. Boarding door 23!
+//replace here at the top did work only on the first occurence, but replaceAll will work in all occurences
+
+//Another solution with regular expression
+/* To use regular expressions, we need to  put strings between slashes /, so 
+not betwwen quotes then all we want to do with this regular expression is 
+to write the g like that /door/g and this stands for global */
+console.log(annoucement.replace(/door/g, 'gate'));
+
