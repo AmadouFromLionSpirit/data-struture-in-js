@@ -461,3 +461,8 @@ const lowerEmail = loginEmail.toLowerCase();
 const trimmedEmail = lowerEmail.trim();
 console.log(trimmedEmail); //result:hello@jonas.io
 
+//in fact we don't really need the trim method, we can do all what is at the top in one step
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail); //result: hello@jonas.io
+console.log(email === normalizedEmail);
+
