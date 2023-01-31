@@ -466,6 +466,18 @@ const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail); //result: hello@jonas.io
 console.log(email === normalizedEmail);
 
-//Since ES19 , there is also trim start and trim end , that can help to trim space from 
+//Since ES19 , there is also trim start and trim end , that can help to trim space from
 //the start or from the end
 
+// ==================== Most important ==================
+//Replace parts of strings
+
+const priceGB = '288,97£';
+//The goal is to convert the price in us, for that we will need to replace the
+//pound with the dollars sign and the comma with a dot
+  //With the replace method, we will use two methods, the first one is the one we 
+  //want to replace and the second argument is the string that will replace our first argument
+  //then we will use chaining to replace the , by ., we can do that because 
+  //priceGB.replace('£', '$') returns a string)
+const priceUS = priceGB.replace('£', '$').replace(',','.');
+console.log(priceUS);
