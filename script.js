@@ -481,3 +481,9 @@ const priceGB = '288,97£';
   //priceGB.replace('£', '$') returns a string)
 const priceUS = priceGB.replace('£', '$').replace(',','.');
 console.log(priceUS);
+
+//Replace entire word
+  //replace creates a brand new string, it doesn't mutate the other one
+const annoucement = 'All passengers come to boarding door 23. Boarding door 23!'
+console.log(annoucement.replaceAll('door', 'gate'));// result: All passengers come to boarding gate 23. Boarding door 23!
+//replace here at the top did work only on the first occurence
