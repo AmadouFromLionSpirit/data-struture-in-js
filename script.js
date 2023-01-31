@@ -466,3 +466,6 @@ const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail); //result: hello@jonas.io
 console.log(email === normalizedEmail);
 
+//Since ES19 , there is also trim start and trim end , that can help to trim space from 
+//the start or from the end
+
