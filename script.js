@@ -544,6 +544,28 @@ length
 : 
 4 */
 //Now I will split with the space
-console.log('Amadou Sarr'.split(' '));
+console.log('Amadou Sarr'.split(' '));// result: (2) ['Amadou', 'Sarr']
+
+//The join method is the opposite of the split method
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+const newName = ['Mr.',firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+//We want to capitalize all the first words of the full name
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('amadou oumar coumba sarr');
+capitalizeName('jonas schmedtmann');
+
 
 
