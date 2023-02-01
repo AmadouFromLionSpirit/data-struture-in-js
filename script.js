@@ -493,4 +493,57 @@ console.log(annoucement.replace('door', 'gate'));// result: All passengers come 
 not betwwen quotes then all we want to do with this regular expression is 
 to write the g like that /door/g and this stands for global */
 console.log(annoucement.replace(/door/g, 'gate'));
+//The replace method is sensitive
+
+//methods that returns Boooleans include, startsWith and endWith
+const planeOne = 'A320neo';
+console.log(plane.includes('A320')); //result: true
+console.log(plane.includes('Boeing'));//result: false
+console.log(plane.startsWith('Air'));//result: false
+
+
+if (planeOne.startsWith('Airbus') && planeOne.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}  
+
+//Practice exercise
+// Have the habits when we receive something from the input of a user, to put everything in lowercase
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('gun') || baggage.includes('knife')) {
+    console.log('You are not allowed on board');
+  }
+  else {
+    console.log('Welcome aboard!');
+  }
+}
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');//result:  "Replacing words with regular expression"
+checkBaggage('Socks and camera');//result: Welcome aboard!
+checkBaggage('Got a snack and a gun for protection');//You are not allowed on board
+
+//Split method: it allows us to split a string into multiples parts based on a divider string
+//In the example below, the divider string will be +
+//So it will split the string and store the elements in an array
+console.log('a+very+nice+string'.split('+'));
+//result:
+/* Array(4)
+0
+: 
+"a"
+1
+: 
+"very"
+2
+: 
+"nice"
+3
+: 
+"string"
+length
+: 
+4 */
+//Now I will split with the space
+console.log('Amadou Sarr'.split(' '));
+
 
